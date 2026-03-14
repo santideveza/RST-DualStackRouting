@@ -428,9 +428,9 @@ router bgp 1
  neighbor 207.7.7.2 remote-as 2
  neighbor 209.9.9.3 remote-as 3
  network 10.1.1.0 Mask 255.255.255.252
- network 207.7.7.0
- network 208.8.8.0
- network 209.9.9.0
+ network 207.7.7.0 Mask 255.255.255.0
+ network 208.8.8.0 Mask 255.255.255.0
+ network 209.9.9.0 Mask 255.255.255.0
 end
 
 
@@ -441,7 +441,7 @@ bgp log-neighbor-changes
 neighbor 24.2.4.2 remote-as 2
 neighbor 45.4.5.5 remote-as 45
 neighbor 208.8.8.1 remote-as 1
-network 208.8.8.0
+network 208.8.8.0 mask 255.255.255.0
 network 24.2.4.0 mask 255.255.255.0
 network 44.44.44.44 mask 255.255.255.255
 network 45.4.5.0 mask 255.255.255.0
